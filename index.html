@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Joyeria singapur | Joyería medellon</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <a href="#" class="logo">
+        <span>JOYERÍA</span>
+        <small>SINGAPUR</small>
+    </a>
+
+    <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#coleccion">Colección</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-icons">
+
+        <button onclick="abrirBusqueda()">⌕</button>
+
+        <button onclick="abrirFavoritos()">
+            ♡
+            <span id="favoritosCantidad">0</span>
+        </button>
+
+        <button onclick="abrirCarrito()">
+            🛍
+            <span id="carritoCantidad">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= BUSCADOR ================= -->
+
+<div class="buscador" id="buscador">
+
+    <button onclick="cerrarBusqueda()" class="cerrar">
+        ×
+    </button>
+
+    <h2>¿Qué estás buscando?</h2>
+
+    <input
+        type="text"
+        id="busqueda"
+        placeholder="Buscar anillos, collares, aretes..."
+        onkeyup="buscarProductos()"
+    >
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="inicio" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="subtitulo">
+            JOYERÍA PREMIUM
+        </p>
+
+        <h1>
+            Renace <br>
+            en <span>cada brillo.</span>
+        </h1>
+
+        <p class="hero-text">
+            Descubre piezas creadas para acompañar
+            tus momentos más especiales.
+            joyeria de oro laminado y oso 18k
+        </p>
+
+        <a href="#coleccion" class="btn-gold">
+            CATALOGO 
+        </a>
+
+    </div>
+
+    <div class="hero-scroll">
+        SCROLL ↓
+    </div>
+
+</section>
+
+
+<!-- ================= BENEFICIOS ================= -->
+
+<section class="beneficios">
+
+    <div>
+        <span>✦</span>
+        <h3>Calidad Premium</h3>
+        <p>Joyas seleccionadas cuidadosamente.</p>
+    </div>
+
+    <div>
+        <span>◇</span>
+        <h3>Diseños Exclusivos</h3>
+        <p>Piezas que resaltan tu personalidad.</p>
+    </div>
+
+    <div>
+        <span>♢</span>
+        <h3>Envíos Seguros</h3>
+        <p>Recibe tu joya desees.</p>
+    </div>
+
+    <div>
+        <span>♡</span>
+        <h3>Compra Segura</h3>
+        <p>Tu información siempre protegida.</p>
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORÍAS ================= -->
+
+<section class="categorias">
+
+    <div class="titulo">
+
+        <p>ELIGE TU ESTILO</p>
+
+        <h2>
+            Conoce nuestras variedades
+        </h2>
+
+    </div>
+
+    <div class="categorias-grid">
+
+        <a href="#coleccion" class="categoria grande">
+
+            <img src="./imagenes/anillos.jpg">
+
+            <div>
+                <span>01</span>
+                <h3>Anillos</h3>
+            </div>
+
+        </a>
+
+        <a href="#coleccion" class="categoria">
+
+            <img src="./imagenes/cadenas.jpeg">
+
+            <div>
+                <span>02</span>
+                <h3>Cadenas</h3>
+            </div>
+
+        </a>
+
+        <a href="#coleccion" class="categoria">
+
+            <img src="./imagenes/topitos.jpeg">
+
+            <div>
+                <span>03</span>
+                <h3>topitos</h3>
+            </div>
+
+        </a>
+
+        <a href="#coleccion" class="categoria">
+
+            <img src="./imagenes/pulseras.jpeg">
+
+            <div>
+                <span>04</span>
+                <h3>Pulseras</h3>
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTOS ================= -->
+
+<section id="coleccion" class="productos">
+
+    <div class="titulo">
+
+        <p>NUESTRA SELECCIÓN</p>
+
+        <h2>
+            Piezas destacadas
+        </h2>
+
+    </div>
+
+
+    <!-- FILTROS -->
+
+    <div class="filtros">
+
+        <button class="filtro activo" onclick="filtrar('todos', this)">
+            Todos
+        </button>
+
+        <button class="filtro" onclick="filtrar('anillos', this)">
+            Anillos
+        </button>
+
+        <button class="filtro" onclick="filtrar('collares', this)">
+            cadenas
+        </button>
+
+        <button class="filtro" onclick="filtrar('aretes', this)">
+            topitos
+        </button>
+
+        <button class="filtro" onclick="filtrar('pulseras', this)">
+            Pulseras
+        </button>
+
+    </div>
+
+
+    <div class="productos-grid" id="productosGrid">
+
+
+        <!-- PRODUCTO -->
+
+        <article class="producto" data-categoria="anillos">
+
+            <div class="producto-img">
+
+                <span class="nuevo">
+                    NUEVO
+                </span>
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img src="./imagenes/anillos.jpg">
+
+                <button
+                    class="vista"
+                    onclick="verProducto('Anillos promesa', 800.000)"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>ANILLOS</p>
+
+                <h3>
+                    Anillos promesa
+                </h3>
+
+                <strong>
+                    $800.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito('anillos promesa', 800000)"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article class="producto" data-categoria="collares">
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img src="./imagenes/cadenas.jpeg">
+
+                <button
+                    class="vista"
+                    onclick="verProducto('Cadena escalera tallada', 280.000)"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>Cadenas</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito('cadena escalera tallado', 280000)"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article class="producto" data-categoria="aretes">
+
+            <div class="producto-img">
+
+                <span class="nuevo">
+                    FAVORITO
+                </span>
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img src="./imagenes/topitos.jpeg">
+
+                <button
+                    class="vista"
+                    onclick="verProducto('topitos sol cuadrado', 70.000)"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>topitos</p>
+
+                <h3>
+                    topitos sol cuadrado
+                </h3>
+
+                <strong>
+                    $70.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito('topitos sol cuadrado', 70000)"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article class="producto" data-categoria="pulseras">
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img src="./imagenes/pulseras.jpeg">
+
+                <button
+                    class="vista"
+                    onclick="verProducto('Pulsera tejido chino', 380.000)"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>PULSERAS</p>
+
+                <h3>
+                    Pulsera tejido chino
+                </h3>
+
+                <strong>
+                    $380.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito('Pulsera tejido chino', 380000)"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= FRASE ================= -->
+
+<section class="frase">
+
+    <div>
+
+        <span>“</span>
+
+        <h2>
+            diseños con caracter,
+            <br>
+            <em>y significado.</em>
+        </h2>
+
+        <p>
+            JOYERIA SINGAPUR
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NOSOTROS ================= -->
+
+<section id="nosotros" class="nosotros">
+
+    <div class="nosotros-img">
+
+        <img src="./imagenes/SOBRE.jpeg">
+
+    </div>
+
+    <div class="nosotros-text">
+
+        <p class="subtitulo">
+            SOBRE NOSOSTROS
+        </p>
+
+        <h2>
+            Joyas para 
+            <span>cada historia.</span>
+        </h2>
+
+        <p>
+            En Joyeria singapur que una joya es
+            mucho más que un accesorio. Es una expresión
+            de personalidad, elegancia y momentos que
+            merecen ser recordados.
+        </p>
+
+        <p>
+            Seleccionamos cada pieza pensando en quienes
+            buscan calidad, exclusividad y belleza.
+        </p>
+
+        <a href="#contacto" class="btn-outline">
+            CONOCE MÁS
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+    <p>
+        SINGAPUR MEDELLIN
+    </p>
+
+    <h2>
+        Sé parte de nuestro mundo
+    </h2>
+
+    <span>
+        Recibe novedades, promociones y nuevas colecciones.
+    </span>
+
+    <form onsubmit="suscribirse(event)">
+
+        <input
+            type="email"
+            placeholder="Tu correo electrónico"
+            required
+        >
+
+        <button>
+            SUSCRIBIRME
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ================= CONTACTO ================= -->
+
+<section id="contacto" class="contacto">
+
+    <div class="titulo">
+
+        <p>ESTAMOS PARA TI</p>
+
+        <h2>
+            Contáctanos
+        </h2>
+
+    </div>
+
+    <div class="contacto-grid">
+
+        <div class="contacto-info">
+
+            <h3>
+                ¿Tienes alguna pregunta?
+            </h3>
+
+            <p>
+                Nuestro equipo estará encantado
+                de ayudarte a encontrar la joya perfecta.
+            </p>
+
+            <div class="dato">
+                <span>☎</span>
+                <div>
+                    <small>WhatsApp</small>
+                    <strong>+57 3003262771</strong>
+                </div>
+            </div>
+
+            <div class="dato">
+                <span>✉</span>
+                <div>
+                    <small>Email</small>
+                    <strong>contacto@goldenjewelry.com</strong>
+                </div>
+            </div>
+
+            <div class="dato">
+                <span>⌖</span>
+                <div>
+                    <small>Ubicación</small>
+                    <strong>Colombia</strong>
+                </div>
+            </div>
+
+        </div>
+
+
+        <form class="contact-form" onsubmit="enviarFormulario(event)">
+
+            <input
+                type="text"
+                placeholder="Nombre"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Correo electrónico"
+                required
+            >
+
+            <input
+                type="text"
+                placeholder="Asunto"
+                required
+            >
+
+            <textarea
+                placeholder="Escribe tu mensaje..."
+                required
+            ></textarea>
+
+            <button class="btn-gold">
+                ENVIAR MENSAJE
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div class="footer-logo">
+
+            <span>JOYERIA</span>
+
+            <small>
+                SINGAPUR
+            </small>
+
+            <p>
+                Elegancia para momentos
+                que duran para siempre.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>NAVEGACIÓN</h4>
+
+            <a href="#inicio">Inicio</a>
+            <a href="#coleccion">Colección</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>CATEGORÍAS</h4>
+
+            <a href="#coleccion">Anillos</a>
+            <a href="#coleccion">Cadenas</a>
+            <a href="#coleccion">topitos</a>
+            <a href="#coleccion">Pulseras</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>SÍGUENOS</h4>
+
+            <div class="social">
+
+                <a href="#">Instagram</a>
+                <a href="#">whatsapp</a>
+                <a href="#">TikTok</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 SINGAPUR MEDELLIN.
+            Todos los derechos reservados.
+        </p>
+
+        <p>
+            Términos · Privacidad
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= CARRITO ================= -->
+
+<div class="overlay" id="overlay" onclick="cerrarTodo()"></div>
+
+<aside class="carrito-panel" id="carritoPanel">
+
+    <div class="panel-header">
+
+        <h2>
+            Mi carrito
+        </h2>
+
+        <button onclick="cerrarCarrito()">
+            ×
+        </button>
+
+    </div>
+
+    <div id="listaCarrito" class="lista-carrito">
+
+        <p class="carrito-vacio">
+            Tu carrito está vacío.
+        </p>
+
+    </div>
+
+    <div class="carrito-footer">
+
+        <div>
+            <span>Total</span>
+
+            <strong id="total">
+                $0
+            </strong>
+        </div>
+
+        <button class="btn-gold" onclick="finalizarCompra()">
+            FINALIZAR COMPRA
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+    href="https://wa.me/573003262771"
+    target="_blank"
+    class="whatsapp"
+>
+    <span>◉</span>
+    <small>¿Necesitas ayuda?</small>
+</a>
+
+
+<!-- ================= MODAL PRODUCTO ================= -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-box">
+
+        <button onclick="cerrarModal()" class="modal-close">
+            ×
+        </button>
+
+        <div id="modalContenido"></div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
