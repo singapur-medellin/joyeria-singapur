@@ -1,0 +1,3708 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Joyería Singapur | Joyería Medellín</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <a href="#inicio" class="logo">
+        <span>JOYERÍA</span>
+        <small>SINGAPUR</small>
+    </a>
+
+    <nav class="nav">
+
+        <a href="#inicio">Inicio</a>
+        <a href="#coleccion">Colección</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+
+    </nav>
+
+    <div class="header-icons">
+
+        <button onclick="abrirBusqueda()">⌕</button>
+
+        <button onclick="abrirFavoritos()">
+            ♡
+            <span id="favoritosCantidad">0</span>
+        </button>
+
+        <button onclick="abrirCarrito()">
+            🛍
+            <span id="carritoCantidad">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     BUSCADOR
+===================================================== -->
+
+<div class="buscador" id="buscador">
+
+    <button onclick="cerrarBusqueda()" class="cerrar">
+        ×
+    </button>
+
+    <h2>¿Qué estás buscando?</h2>
+
+    <input
+        type="text"
+        id="busqueda"
+        placeholder="Buscar anillos, cadenas, topitos..."
+        onkeyup="buscarProductos()"
+    >
+
+</div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section id="inicio" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="subtitulo">
+            JOYERÍA PREMIUM
+        </p>
+
+        <h1>
+            Renace <br>
+            en <span>cada brillo.</span>
+        </h1>
+
+        <p class="hero-text">
+            Descubre piezas creadas para acompañar
+            tus momentos más especiales.
+            Joyería de oro laminado y oro 18k.
+        </p>
+
+        <a href="#coleccion" class="btn-gold">
+            CATÁLOGO
+        </a>
+
+    </div>
+
+    <div class="hero-scroll">
+        SCROLL ↓
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BENEFICIOS
+===================================================== -->
+
+<section class="beneficios">
+
+    <div>
+        <span>✦</span>
+        <h3>Calidad Premium</h3>
+        <p>Joyas seleccionadas cuidadosamente.</p>
+    </div>
+
+    <div>
+        <span>◇</span>
+        <h3>Diseños Exclusivos</h3>
+        <p>Piezas que resaltan tu personalidad.</p>
+    </div>
+
+    <div>
+        <span>♢</span>
+        <h3>Envíos Seguros</h3>
+        <p>Recibe tu joya donde desees.</p>
+    </div>
+
+    <div>
+        <span>♡</span>
+        <h3>Compra Segura</h3>
+        <p>Tu información siempre protegida.</p>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORÍAS
+===================================================== -->
+
+<section class="categorias">
+
+    <div class="titulo">
+
+        <p>ELIGE TU ESTILO</p>
+
+        <h2>
+            Conoce nuestras variedades
+        </h2>
+
+    </div>
+
+
+    <div class="categorias-grid">
+
+
+        <!-- ANILLOS -->
+
+        <a
+            href="#coleccion"
+            class="categoria"
+            onclick="mostrarCategoria('anillos')"
+        >
+
+            <img
+                src="./imagenes/anillos1.jpeg"
+                alt="Anillos de Joyería Singapur"
+            >
+
+            <div>
+                <span>01</span>
+                <h3>Anillos</h3>
+            </div>
+
+        </a>
+
+
+
+        <!-- CADENAS -->
+
+        <a
+            href="#coleccion"
+            class="categoria"
+            onclick="mostrarCategoria('cadenas')"
+        >
+
+            <img
+                src="./imagenes/cadena1.jpeg"
+                alt="Cadenas de Joyería Singapur"
+            >
+
+            <div>
+                <span>02</span>
+                <h3>Cadenas</h3>
+            </div>
+
+        </a>
+
+
+
+        <!-- TOPITOS -->
+
+        <a
+            href="#coleccion"
+            class="categoria"
+            onclick="mostrarCategoria('aretes')"
+        >
+
+            <img
+                src="./imagenes/topitos1.jpeg"
+                alt="Topitos de Joyería Singapur"
+            >
+
+            <div>
+                <span>03</span>
+                <h3>Topitos</h3>
+            </div>
+
+        </a>
+
+
+
+        <!-- PULSERAS -->
+
+        <a
+            href="#coleccion"
+            class="categoria"
+            onclick="mostrarCategoria('pulseras')"
+        >
+
+            <img
+                src="./imagenes/pulsera1.jpeg"
+                alt="Pulseras de Joyería Singapur"
+            >
+
+            <div>
+                <span>04</span>
+                <h3>Pulseras</h3>
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCTOS
+===================================================== -->
+
+<section id="coleccion" class="productos">
+
+    <div class="titulo">
+
+        <p>NUESTRA SELECCIÓN</p>
+
+        <h2>
+            Piezas destacadas
+        </h2>
+
+    </div>
+
+
+
+    <!-- FILTROS -->
+
+    <div class="filtros">
+
+        <button
+            class="filtro activo"
+            onclick="filtrar('todos', this)"
+        >
+            Todos
+        </button>
+
+        <button
+            class="filtro"
+            onclick="filtrar('anillos', this)"
+        >
+            Anillos
+        </button>
+
+        <button
+            class="filtro"
+            onclick="filtrar('cadenas', this)"
+        >
+            Cadenas
+        </button>
+
+        <button
+            class="filtro"
+            onclick="filtrar('aretes', this)"
+        >
+            Topitos
+        </button>
+
+        <button
+            class="filtro"
+            onclick="filtrar('pulseras', this)"
+        >
+            Pulseras
+        </button>
+
+    </div>
+
+
+
+    <!-- =================================================
+         GRID DE PRODUCTOS
+    ================================================= -->
+
+    <div class="productos-grid" id="productosGrid">
+
+
+
+        <!-- ================= ANILLO ================= -->
+
+        <article
+            class="producto"
+            data-categoria="anillos"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/anillo2.jpeg"
+                    alt="Anillo piedra gota verde"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Anillo piedra gota verde',
+                        220000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>ANILLOS</p>
+
+                <h3>
+                    Anillo piedra gota verde
+                </h3>
+
+                <strong>
+                    $220.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Anillo piedra gota verde',
+                        220000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="anillos"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/anillos1.jpeg"
+                    alt="Anillos promesa"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Anillos promes',
+                        800000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>ANILLOS</p>
+
+                <h3>
+                    Anillos promesa
+                </h3>
+
+                <strong>
+                    $800.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Anillos promesa',
+                        800000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        
+
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="anillos"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/anillo3.jpeg"
+                    alt="Anillo san venito"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Anillo san venito',
+                        120000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>ANILLOS</p>
+
+                <h3>
+                    Anillo san venito 
+                </h3>
+
+                <strong>
+                    $120.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Anillos san venito',
+                        120000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="anillos"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/anillo4.jpeg"
+                    alt="Anillo guchi"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Anillo guchi',
+                        100000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>ANILLOS</p>
+
+                <h3>
+                    Anillo guchi
+                </h3>
+
+                <strong>
+                    $100.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Anillo guchi',
+                        100000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="anillos"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/anillo5.jpeg"
+                    alt="Anillo tipo corona"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Anillo tipo corona',
+                        200000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>ANILLOS</p>
+
+                <h3>
+                    Anillo tipo corona
+                </h3>
+
+                <strong>
+                    $200.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Anillo tipo corona',
+                        200000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="producto"
+            data-categoria="anillos"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/anillo6.jpeg"
+                    alt="Anillo solitario de compromiso"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Anillo solitario de compromiso',
+                        180000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>ANILLOS</p>
+
+                <h3>
+                    Anillo solitario de compromiso
+                </h3>
+
+                <strong>
+                    $180.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Anillo solitario de compromiso',
+                        180000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="producto"
+            data-categoria="anillos"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/anillo7.jpeg"
+                    alt="Anillo solitario"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Anillo solitario',
+                        180000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>ANILLOS</p>
+
+                <h3>
+                    Anillo solitario
+                </h3>
+
+                <strong>
+                    $180.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Anillo solitario',
+                        180000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="producto"
+            data-categoria="anillos"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/anillo8.jpeg"
+                    alt="Anillo compromiso"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Anillo compromiso',
+                        200000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>ANILLOS</p>
+
+                <h3>
+                    Anillo compromiso
+                </h3>
+
+                <strong>
+                    $200.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Anillo compromiso',
+                        200000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="producto"
+            data-categoria="anillos"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/anillo9.jpeg"
+                    alt="Anillo zigzag con circonesBM"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Anillo zigzag con circonesBM',
+                        160000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>ANILLOS</p>
+
+                <h3>
+                    Anillo zigzag con circonesBM
+                </h3>
+
+                <strong>
+                    $160.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Anillo zigzag con circonesBM',
+                        160000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="producto"
+            data-categoria="anillos"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/anillo10.jpeg"
+                    alt="Anillo 4 trebols"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Anillo 4 trebols',
+                        200000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>ANILLOS</p>
+
+                <h3>
+                    Anillo 4 trebols
+                </h3>
+
+                <strong>
+                    $200.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Anillo 4 trebols',
+                        200000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="producto"
+            data-categoria="anillos"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/anillo11.jpeg"
+                    alt="Anillo cruz"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Anillo cruz',
+                        160000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>ANILLOS</p>
+
+                <h3>
+                    Anillo cruz
+                </h3>
+
+                <strong>
+                    $160.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Anillo cruz',
+                        160000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="producto"
+            data-categoria="anillos"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/anillo12.jpeg"
+                    alt="Anillo entrelasado"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Anillo entrelasado',
+                        200000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>ANILLOS</p>
+
+                <h3>
+                    Anillo entrelasado
+                </h3>
+
+                <strong>
+                    $200.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Anillo entrelasado',
+                        200000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+
+
+        <!-- ================= CADENA ================= -->
+
+        
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena18.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena17.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena16.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena15.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+        
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena14.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena13.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena12.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena11.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena10.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena1.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena2.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena3.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena4.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena5.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena6.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena7.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena8.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="cadenas"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/cadena9.jpeg"
+                    alt="Cadena escalera tallada"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>CADENAS</p>
+
+                <h3>
+                    Cadena escalera tallada
+                </h3>
+
+                <strong>
+                    $280.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Cadena escalera tallada',
+                        280000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <var>
+            
+        </var>
+
+
+
+        <!-- ================= TOPITOS ================= -->
+
+        <article
+            class="producto"
+            data-categoria="aretes"
+        >
+
+            <div class="producto-img">
+
+                <span class="nuevo">
+                    FAVORITO
+                </span>
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/topitos1.jpeg"
+                    alt="Topitos sol cuadrado"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Topitos sol cuadrado',
+                        70000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>TOPITOS</p>
+
+                <h3>
+                    Topitos sol cuadrado
+                </h3>
+
+                <strong>
+                    $70.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Topitos sol cuadrado',
+                        70000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="aretes"
+        >
+
+            <div class="producto-img">
+
+                <span class="nuevo">
+                    FAVORITO
+                </span>
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/topitos2.jpeg"
+                    alt="Topitos ojo turco parpados"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Topitos ojo turco parpados',
+                        70000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>TOPITOS</p>
+
+                <h3>
+                    Topitos ojo turco parpados
+                </h3>
+
+                <strong>
+                    $70.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Topitos ojo turco parpado',
+                        70000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="producto"
+            data-categoria="aretes"
+        >
+
+            <div class="producto-img">
+
+                <span class="nuevo">
+                    FAVORITO
+                </span>
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/topitos3.jpeg"
+                    alt="Topitos arbol de la vida"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Topitos arbol de la vida',
+                        70000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>TOPITOS</p>
+
+                <h3>
+                    Topitos arbol de la vida
+                </h3>
+
+                <strong>
+                    $70.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Topitos de la vida',
+                        70000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="producto"
+            data-categoria="aretes"
+        >
+
+            <div class="producto-img">
+
+                <span class="nuevo">
+                    FAVORITO
+                </span>
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/topitos4.jpeg"
+                    alt="Topitos cruz circon verde"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Topitos cruz circon verde',
+                        70000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>TOPITOS</p>
+
+                <h3>
+                    Topitos cruz circon verde
+                </h3>
+
+                <strong>
+                    $70.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Topitos cruz circon verde',
+                        70000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="producto"
+            data-categoria="aretes"
+        >
+
+            <div class="producto-img">
+
+                <span class="nuevo">
+                    FAVORITO
+                </span>
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/topitos5.jpeg"
+                    alt="Topitos mini circulo"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Topitos mini circulo',
+                        50000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>TOPITOS</p>
+
+                <h3>
+                    Topitos mini circulo
+                </h3>
+
+                <strong>
+                    $50.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Topitos mini circulo',
+                        50000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="producto"
+            data-categoria="aretes"
+        >
+
+            <div class="producto-img">
+
+                <span class="nuevo">
+                    FAVORITO
+                </span>
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/topitos6.jpeg"
+                    alt="Topitos corazon centro mini"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Topitos corazon centro mini',
+                        60000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>TOPITOS</p>
+
+                <h3>
+                    Topitos corazon centro mini
+                </h3>
+
+                <strong>
+                    $60.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Topitos corazon centro mini',
+                        60000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="producto"
+            data-categoria="aretes"
+        >
+
+            <div class="producto-img">
+
+                <span class="nuevo">
+                    FAVORITO
+                </span>
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/topitos7.jpeg"
+                    alt="Topitos corona rolex"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Topitos corona rolex',
+                        80000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>TOPITOS</p>
+
+                <h3>
+                    Topitos corona rolex
+                </h3>
+
+                <strong>
+                    $80.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Topitos corona rolex',
+                        80000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="producto"
+            data-categoria="aretes"
+        >
+
+            <div class="producto-img">
+
+                <span class="nuevo">
+                    FAVORITO
+                </span>
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/topitos8.jpeg"
+                    alt="Topitos virgen de guadalupe en ovalo"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Topitos virgen de guadalupe en ovalo',
+                        60000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>TOPITOS</p>
+
+                <h3>
+                    Topitos virgen de guadalupe en ovalo
+                </h3>
+
+                <strong>
+                    $60.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Topitos virgen de guadalupe en ovalo',
+                        60000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="aretes"
+        >
+
+            <div class="producto-img">
+
+                <span class="nuevo">
+                    FAVORITO
+                </span>
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/topitos9.jpeg"
+                    alt="Topitos calavera"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Topitos calavera',
+                        112000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>TOPITOS</p>
+
+                <h3>
+                    Topitos calavera
+                </h3>
+
+                <strong>
+                    $112.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Topitos calavera',
+                        112000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- ================= PULSERA ================= -->
+
+        <article
+            class="producto"
+            data-categoria="pulseras"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/pulsera1.jpeg"
+                    alt="Pulsera tejido chino 19cm 6mm "
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Pulsera tejido chino 19cm 6mm',
+                        380000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>PULSERAS</p>
+
+                <h3>
+                    Pulsera tejido chino 19cm  6mm
+                </h3>
+
+                <strong>
+                    $380.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Pulsera tejido chino 19cm 6mm',
+                        380000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="pulseras"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/pulsera2.jpeg"
+                    alt="Pulsera tenni 3mm"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Pulsera tenni 3mm',
+                        320000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>PULSERAS</p>
+
+                <h3>
+                    Pulsera tenni 3mm
+                </h3>
+
+                <strong>
+                    $320.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Pulsera tenni 3mm',
+                        320000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="pulseras"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/pulsera3.jpeg"
+                    alt="Pulsera 3 x 1 19cm 1mm"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Pulsera 3 x 1 19cm 1mm',
+                        110000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>PULSERAS</p>
+
+                <h3>
+                    Pulsera 3 x 1  19cm 1mm
+                </h3>
+
+                <strong>
+                    $110.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Pulsera 3 x 1 19cm 1mm',
+                        110000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="pulseras"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/pulsera4.jpeg"
+                    alt="Pulsera plana espejo 19cm 2mm"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Pulsera plana espejo 19cm 2mm',
+                        120000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>PULSERAS</p>
+
+                <h3>
+                    Pulsera plana espejo 19cm 2mm
+                </h3>
+
+                <strong>
+                    $120.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Pulsera plana espejo 19cm 2mm',
+                        120000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="pulseras"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/pulsera5.jpeg"
+                    alt="Pulsera ancla 17cm 4.5mm"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Pulsera ancla',
+                        230000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>PULSERAS</p>
+
+                <h3>
+                    Pulsera ancla 17cm 4.5mm
+                </h3>
+
+                <strong>
+                    $230.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Pulsera ancla 17cm 4.5mm',
+                        230000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="pulseras"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/pulsera5.jpeg"
+                    alt="Pulsera ancla 19cm 4.5mm"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Pulsera ancla 19cm 4.5mm',
+                        250000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>PULSERAS</p>
+
+                <h3>
+                    Pulsera ancla 19cm 4.5mm
+                </h3>
+
+                <strong>
+                    $250.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Pulsera ancla 19cm 4.5mm',
+                        250000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="pulseras"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/pulsera6.jpeg"
+                    alt="Pulsera veneciana con valin 19cm 1mm x2mm"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Pulsera veneciana con valin 19cm 1mm x2mm',
+                        220000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>PULSERAS</p>
+
+                <h3>
+                    Pulsera veneciana con valin 19cm 1mm x2mm
+                </h3>
+
+                <strong>
+                    $220.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Pulsera veneciana con valin 19cm 1mm x2mm',
+                        220000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="pulseras"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/pulsera7.jpeg"
+                    alt="Pulsera militar diamantada 17cm "
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Pulsera militar diamantada 17cm',
+                        260000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>PULSERAS</p>
+
+                <h3>
+                    Pulsera militar diamantada 17cm
+                </h3>
+
+                <strong>
+                    $2600.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Pulsera militar diamantada',
+                        260000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+        <article
+            class="producto"
+            data-categoria="pulseras"
+        >
+
+            <div class="producto-img">
+
+                <button
+                    class="favorito"
+                    onclick="agregarFavorito(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="./imagenes/pulsera8.jpeg"
+                    alt="Pulsera franco 17cm 3mm"
+                >
+
+                <button
+                    class="vista"
+                    onclick="verProducto(
+                        'Pulsera franco 17cm 3mm',
+                        320000
+                    )"
+                >
+                    VISTA RÁPIDA
+                </button>
+
+            </div>
+
+
+            <div class="producto-info">
+
+                <p>PULSERAS</p>
+
+                <h3>
+                    Pulsera franco 17cm 3mm
+                </h3>
+
+                <strong>
+                    $320.000
+                </strong>
+
+                <button
+                    onclick="agregarCarrito(
+                        'Pulsera ',
+                        320000
+                    )"
+                    class="agregar"
+                >
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+
+        </article>
+
+       
+
+       
+
+
+
+
+        </var>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FRASE
+===================================================== -->
+
+<section class="frase">
+
+    <div>
+
+        <span>“</span>
+
+        <h2>
+            diseños con carácter,
+            <br>
+            <em>y significado.</em>
+        </h2>
+
+        <p>
+            JOYERÍA SINGAPUR
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NOSOTROS
+===================================================== -->
+
+<section id="nosotros" class="nosotros">
+
+    <div class="nosotros-img">
+
+        <img
+            src="./imagenes/SOBRE.jpeg"
+            alt="Sobre nosotros - Joyería Singapur"
+        >
+
+    </div>
+
+
+    <div class="nosotros-text">
+
+        <p class="subtitulo">
+            SOBRE NOSOTROS
+        </p>
+
+        <h2>
+            Joyas para
+            <span>cada historia.</span>
+        </h2>
+
+        <p>
+            En Joyería Singapur creemos que una joya es
+            mucho más que un accesorio. Es una expresión
+            de personalidad, elegancia y momentos que
+            merecen ser recordados.
+        </p>
+
+        <p>
+            Seleccionamos cada pieza pensando en quienes
+            buscan calidad, exclusividad y belleza.
+        </p>
+
+        <a href="#contacto" class="btn-outline">
+            CONOCE MÁS
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter">
+
+    <p>
+        SINGAPUR MEDELLÍN
+    </p>
+
+    <h2>
+        Sé parte de nuestro mundo
+    </h2>
+
+    <span>
+        Recibe novedades, promociones y nuevas colecciones.
+    </span>
+
+    <form onsubmit="suscribirse(event)">
+
+        <input
+            type="email"
+            placeholder="Tu correo electrónico"
+            required
+        >
+
+        <button>
+            SUSCRIBIRME
+        </button>
+
+    </form>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACTO
+===================================================== -->
+
+<section id="contacto" class="contacto">
+
+    <div class="titulo">
+
+        <p>ESTAMOS PARA TI</p>
+
+        <h2>
+            Contáctanos
+        </h2>
+
+    </div>
+
+
+    <div class="contacto-grid">
+
+
+        <!-- INFORMACIÓN -->
+
+        <div class="contacto-info">
+
+            <h3>
+                ¿Tienes alguna pregunta?
+            </h3>
+
+            <p>
+                Nuestro equipo estará encantado
+                de ayudarte a encontrar la joya perfecta.
+            </p>
+
+
+            <div class="dato">
+
+                <span>☎</span>
+
+                <div>
+
+                    <small>WhatsApp</small>
+
+                    <strong>
+                        +57 3003262771
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="dato">
+
+                <span>✉</span>
+
+                <div>
+
+                    <small>Email</small>
+
+                    <strong>
+                        contacto@goldenjewelry.com
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="dato">
+
+                <span>⌖</span>
+
+                <div>
+
+                    <small>Ubicación</small>
+
+                    <strong>
+                        Colombia
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FORMULARIO -->
+
+        <form
+            class="contact-form"
+            onsubmit="enviarFormulario(event)"
+        >
+
+            <input
+                type="text"
+                placeholder="Nombre"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Correo electrónico"
+                required
+            >
+
+            <input
+                type="text"
+                placeholder="Asunto"
+                required
+            >
+
+            <textarea
+                placeholder="Escribe tu mensaje..."
+                required
+            ></textarea>
+
+            <button class="btn-gold">
+                ENVIAR MENSAJE
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-top">
+
+
+        <!-- LOGO -->
+
+        <div class="footer-logo">
+
+            <span>JOYERÍA</span>
+
+            <small>
+                SINGAPUR
+            </small>
+
+            <p>
+                Elegancia para momentos
+                que duran para siempre.
+            </p>
+
+        </div>
+
+
+
+        <!-- NAVEGACIÓN -->
+
+        <div>
+
+            <h4>NAVEGACIÓN</h4>
+
+            <a href="#inicio">Inicio</a>
+            <a href="#coleccion">Colección</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+
+        </div>
+
+
+
+        <!-- CATEGORÍAS -->
+
+        <div>
+
+            <h4>CATEGORÍAS</h4>
+
+            <a
+                href="#coleccion"
+                onclick="mostrarCategoria('anillos')"
+            >
+                Anillos
+            </a>
+
+            <a
+                href="#coleccion"
+                onclick="mostrarCategoria('cadenas')"
+            >
+                Cadenas
+            </a>
+
+            <a
+                href="#coleccion"
+                onclick="mostrarCategoria('aretes')"
+            >
+                Topitos
+            </a>
+
+            <a
+                href="#coleccion"
+                onclick="mostrarCategoria('pulseras')"
+            >
+                Pulseras
+            </a>
+
+        </div>
+
+
+
+        <!-- REDES -->
+
+        <div>
+
+            <h4>SÍGUENOS</h4>
+
+            <div class="social">
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    WhatsApp
+                </a>
+
+                <a href="#">
+                    TikTok
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 SINGAPUR MEDELLÍN.
+            Todos los derechos reservados.
+        </p>
+
+        <p>
+            Términos · Privacidad
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     CARRITO
+===================================================== -->
+
+<div
+    class="overlay"
+    id="overlay"
+    onclick="cerrarTodo()"
+></div>
+
+
+<aside
+    class="carrito-panel"
+    id="carritoPanel"
+>
+
+    <div class="panel-header">
+
+        <h2>
+            Mi carrito
+        </h2>
+
+        <button onclick="cerrarCarrito()">
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        id="listaCarrito"
+        class="lista-carrito"
+    >
+
+        <p class="carrito-vacio">
+            Tu carrito está vacío.
+        </p>
+
+    </div>
+
+
+    <div class="carrito-footer">
+
+        <div>
+
+            <span>
+                Total
+            </span>
+
+            <strong id="total">
+                $0
+            </strong>
+
+        </div>
+
+        <button
+            class="btn-gold"
+            onclick="finalizarCompra()"
+        >
+            FINALIZAR COMPRA
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<a
+    href="https://wa.me/573003262771"
+    target="_blank"
+    class="whatsapp"
+>
+
+    <span>◉</span>
+
+    <small>
+        ¿Necesitas ayuda?
+    </small>
+
+</a>
+
+
+
+<!-- =====================================================
+     MODAL PRODUCTO
+===================================================== -->
+
+<div
+    class="modal"
+    id="modal"
+>
+
+    <div class="modal-box">
+
+        <button
+            onclick="cerrarModal()"
+            class="modal-close"
+        >
+            ×
+        </button>
+
+        <div id="modalContenido"></div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+```
