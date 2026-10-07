@@ -265,25 +265,25 @@
 
         <!-- TEJIDOS -->
 
-<a
-    href="#coleccion"
-    class="categoria"
-    onclick="mostrarCategoria('tejidos')"
+        <a
+                href="#coleccion"
+                class="categoria"
+                onclick="mostrarCategoria('tejidos')"
 >
 
-    <img
-        src="./imagenes/tejidos1.jpeg"
-        alt="Tejidos de Joyería Singapur"
+            <img
+                src="./imagenes/t"
+                alt="Tejidos de Joyería Singapur"
     >
 
-    <div>
-        <span>05</span>
-        <h3>Tejidos</h3>
-    </div>
+            <div>
+                <span>05</span>
+                <h3>Tejidos</h3>
+            </div>
 
-</a>
+        </a>
 
-    </div>
+            </div>
 
 </section>
 
@@ -3237,23 +3237,58 @@
 
         <!-- TEJIDOS -->
 
-<article class="producto" data-categoria="tejidos">
+ <article
+    class="producto"
+    data-categoria="tejidos"
+>
 
-    <img
-        src="./imagenes/tejido1.jpeg"
-        alt="Tejido Dorado"
-    >
+    <div class="producto-img">
+
+        <button
+            class="favorito"
+            onclick="agregarFavorito(this)"
+        >
+            ♡
+        </button>
+
+        <img
+            src="./imagenes/tejidos.jpeg"
+            alt="Tejidos "
+        >
+
+        <button
+            class="vista"
+            onclick="verProducto(
+                'Tejidos',
+                380000
+            )"
+        >
+            VISTA RÁPIDA
+        </button>
+
+    </div>
+
 
     <div class="producto-info">
 
-        <h3>Tejido Dorado</h3>
+        <p>TEJIDOS</p>
 
-        <p>$150.000</p>
+        <h3>
+            Tejidos
+        </h3>
+
+        <strong>
+            $380.000
+        </strong>
 
         <button
-            onclick="verProducto('Tejido Dorado', 150000)"
+            onclick="agregarCarrito(
+                'Tejidos',
+                380000
+            )"
+            class="agregar"
         >
-            VER PRODUCTO
+            AGREGAR AL CARRITO
         </button>
 
     </div>
