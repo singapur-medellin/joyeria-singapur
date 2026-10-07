@@ -3,7 +3,6 @@
 ================================= */
 
 let carrito = [];
-
 let favoritos = 0;
 
 
@@ -21,7 +20,6 @@ function formatoPesos(valor) {
     }).format(Number(valor));
 
 }
-
 
 
 /* =================================
@@ -71,7 +69,6 @@ function actualizarCarrito() {
 
 
     lista.innerHTML = "";
-
 
     let suma = 0;
 
@@ -363,7 +360,7 @@ function suscribirse(event) {
     event.preventDefault();
 
     alert(
-        "¡Gracias por suscribirte a Golden Jewelry! ✨"
+        "¡Gracias por suscribirte a Joyería Singapur! ✨"
     );
 
     event.target.reset();
@@ -445,21 +442,37 @@ function cerrarTodo() {
 
 }
 
+
+/* =================================
+   MOSTRAR CATEGORÍA
+================================= */
+
 function mostrarCategoria(categoria) {
 
-    const productos = document.querySelectorAll(".producto");
+    const productos =
+        document.querySelectorAll(".producto");
+
 
     productos.forEach(producto => {
 
-        if (producto.dataset.categoria === categoria) {
-            producto.style.display = "block";
+        if (
+            producto.dataset.categoria === categoria
+        ) {
+
+            producto.style.display = "";
+
         } else {
+
             producto.style.display = "none";
+
         }
 
     });
 
-    document.getElementById("coleccion").scrollIntoView({
-        behavior: "smooth"
-    });
+
+    document
+        .getElementById("coleccion")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
 }
