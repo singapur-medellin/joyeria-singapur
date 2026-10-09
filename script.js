@@ -475,4 +475,6 @@ function mostrarCategoria(categoria) {
         .scrollIntoView({
             behavior: "smooth"
         });
+
+        
 }

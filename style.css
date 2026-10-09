@@ -1608,5 +1608,19 @@ footer a:hover {
 
     .producto-img {
         height: 330px;
-    }
+    } 
+
+    
+/* LOGO DEL PIE DE PÁGINA */
+
+.footer-logo-img {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
 }
